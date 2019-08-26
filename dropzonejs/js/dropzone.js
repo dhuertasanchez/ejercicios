@@ -421,12 +421,12 @@ var Dropzone = function (_Emitter) {
         /**
          * The text used before any files are dropped.
          */
-        dictDefaultMessage: "Drop files here to upload",
+        dictDefaultMessage: "Suelta los archivos aquí",
 
         /**
          * The text that replaces the default message text it the browser is not supported.
          */
-        dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
+        dictFallbackMessage: "Tu navegador no soporta la subida de archivos usando Drag and drop.",
 
         /**
          * The text that will be added before the fallback form.

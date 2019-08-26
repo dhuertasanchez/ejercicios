@@ -1,0 +1,19 @@
+.dz-message .icon {
+    width: 64px;
+    height: 64px;
+    background: #EEE;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dz-message .icon .material-icons {
+    font-size: 50px;
+    color: #2E3191;
+}
+
+.dz-message p {
+    margin-top: 28px;
+}
