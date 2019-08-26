@@ -20,7 +20,7 @@
         </div>
     </div>
     
-    <form action="/file-upload.php" class="mdl-typography--subhead dropzone" id="formUploadFiles">
+    <form action="file-upload.php" class="mdl-typography--subhead dropzone" id="formUploadFiles">
         <div class="dz-message">
             <div class="icon">
                 <i class="material-icons">cloud_upload</i>
@@ -29,6 +29,9 @@
                 <span class="mdl-typography--display-1">Arrastra los archivos aquí o haz clic para seleccionar</span><br><br>
                 <span class="mdl-typography--subhead">No hay archivos seleccionados</span>
             </p>
+        </div>
+        <div class="fallback">
+            <input type="file" name="file" id="" multiple>
         </div>
     </form>
 
