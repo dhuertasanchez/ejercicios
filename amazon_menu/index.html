@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Amazon Menú</title>
+</head>
+<body>
+    
+
+    <nav class="menu" id="menu">
+        <div class="contenedor contenedor-botones-menu">
+            <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></button>
+            <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="contenedor contenedor-enlaces-nav">
+            <div class="btn-departamentos" id="btn-departamentos">
+                <p>Todos los <span>Departamentos</span></p>
+                <i class="fas fa-caret-down"></i>
+            </div>
+
+            <div class="enlaces">
+                <a href="#">Cuenta</a>
+                <a href="#">Promociones</a>
+                <a href="#">Mesa de regalos</a>
+                <a href="#">Ayuda</a>
+            </div>
+        </div>
+
+        <div class="contenedor contenedor-grid">
+            <div class="grid" id="grid activo">
+                <div class="categorias">
+                    <button class="btn-regresar"><i class="fas fa-arrow-left"></i></button>
+                    <h3 class="subtitulo">Categorías</h3>
+
+                    <a href="#" data-categoria="tecnologia-y-computadoras">Tecnología y Computadoras <i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="libros">Libros <i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="ropa-y-accesorios">Ropa y Accesorios <i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="hogar-y-cocina">Hogar y cocina <i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="juegos-y-juguetes">Juegos y Juguetes <i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="salud-y-belleza">Salud y Belleza <i class="fas fa-angle-right"></i></a>
+                    <a href="#" data-categoria="alimentos-y-bebidas">Alimentos y Bebidas <i class="fas fa-angle-right"></i></a>
+                </div>
+
+                <div class="contenedor-subcategorias"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contenedor">
+        <article></article>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
