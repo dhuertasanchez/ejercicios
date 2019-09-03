@@ -79,7 +79,7 @@ main article {
     cursor: default;
 }
 
-.menu .btn-departamentos i {
+.menu .btn-departamentos .fa-caret-down {
     margin-left: 20px;
     position: relative;
     bottom: 3px;
@@ -114,13 +114,82 @@ main article {
 
 .grid {
     width: 100%;
-    /*display: none*/
-    background: #CCC;
+    display: none;
     position: absolute;
     top: 5px;
     z-index: 1000;
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "categorias subcategorias subcategorias subcategorias";
+}
+
+.grid.activo {
+    display: grid;
+}
+
+.grid::before {
+    content: '';
+    display: block;
+    background: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #FFF;
+    position: absolute;
+    top: -5px;
+    left: 65px;
+}
+
+.grid > div {
+    background: #FFF;
+    box-shadow: 0px 3px 6px rgba(0,0,0,.10);
+}
+
+/* Categorías */
+
+.grid .btn-regresar {
+    background: #232F3E;
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+}
+
+.grid .btn-regresar .fa-arrow-left {
+    margin-right: 10px;
+}
+
+.grid .categorias {
+    grid-area: categorias;
+    padding-top: 10px;
+    min-height: 300px;
+}
+
+.grid .categorias .subtitulo {
+    display: none;
+}
+
+.grid .categorias a {
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.grid .categorias a .fa-angle-right {
+    display: none;
+}
+
+.grid .categorias a:hover {
+    color: #E47911;
+    font-weight: bold;
+    background: #EAEDED;
+}
+
+.grid .categorias a:hover .fa-angle-right {
+    display: inline-block;
 }
