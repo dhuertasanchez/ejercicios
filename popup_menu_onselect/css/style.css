@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.container {
+    padding: 1.5rem 10rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1.25rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+hr {
+    margin: 3rem 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+}
+
+p {
+    margin-bottom: 2rem;
+    line-height: 1.75rem;
+    text-align: justify;
+}
+
+#twitter-share-btn {
+    width: 132px;
+    height: 100px;
+    font-size: 14px;
+    color: #56B8F5;
+    background-color: #EEE;
+    border: 2px solid #56B8F5;
+    border-radius: 8px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    transition: color 0.2s, background-color 0.2s ease-in-out;
+}
+
+#twitter-share-btn a {
+    display: block;
+    padding: 12px 3px;
+}
+
+#twitter-share-btn a:hover {
+    background: #EEE;
+}
+
+/* #twitter-share-btn:hover {
+    color: #FFF;
+    background-color: #56B8F5;
+} */
+
+.btnEntrance {
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+
+@keyframes btnEntrance {
+    /* zoomIn */
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    100% {
+        opacity: 1;
+    }
+}
