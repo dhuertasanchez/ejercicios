@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Input + Div</title>
+</head>
+<body>
+	
+	<div class="add-user-container">
+		<div class="avatar-container">
+			<i class="material-icons">person_add</i>
+		</div>
+		<div class="title-container">
+			<h3>Agregar nuevo usuario</h3>
+		</div>
+		<div class="body-container">
+			<p>
+				A continuación selecciona el tipo de rol que asignarás al usuario que agregarás al sistema.
+			</p>
+			<label class="labl">
+			    <input type="radio" name="radioname" value="one_value" checked="checked"/>
+			    <div><p><h3>
+			    	Usuario administrador
+			    </h3><br>
+			    Este usuario podrá agregar nuevos administradores, podrá generar reportes de ventas, realizar devoluciones o cancelar compras, podrá agregar nuevos libros así como editar los ya existentes.
+			</p></div>
+			</label>
+			<label class="labl">
+			    <input type="radio" name="radioname" value="another" />
+			    <div>
+			    	<p>
+			    		<h3>Usuario estándar</h3><br>
+			    		Este usuario solamente podrá generar reportes de ventas así como realizar modificaciones en los datos de los libros ya existentes.
+			    	</p>
+			    </div>
+			</label>
+		</div>
+	</div>
+
+</body>
+</html>
