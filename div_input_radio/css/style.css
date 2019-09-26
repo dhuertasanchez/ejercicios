@@ -4,7 +4,7 @@
 }
 
 body {
-	background: #EEE;
+	background: #121212;
 }
 
 .labl {
@@ -24,9 +24,12 @@ body {
 .labl > input:checked + div{ /* (RADIO CHECKED) DIV STYLES */
     background-color: #9FA8DA; /* Color con valor 200 */
     border: 1px solid #1A237E; /* Color con valor 900 */
+    color: #000;
 }
 
 .add-user-container {
+	background: rgba(255, 255, 255, 0.11);
+	color: #FFF;
 	width: 500px;
 	margin: 25px auto;
 	border-radius: 8px;
