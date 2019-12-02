@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.rounded-corner {
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.stepper-container {
+    margin: 28px auto;
+}
+
+.title-add-book {
+    max-width: 100%;
+    padding: 8px;
+}
+
+.mdl-step__content {
+    height: 200px;
+    background: #000;
+}

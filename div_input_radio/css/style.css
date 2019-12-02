@@ -1,0 +1,64 @@
+*, html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #121212;
+}
+
+.labl {
+    display : block;
+    max-width: 100%;
+}
+.labl > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+.labl > input + div{ /* DIV STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+    border-radius: 8px;
+    padding: 8px;
+}
+.labl > input:checked + div{ /* (RADIO CHECKED) DIV STYLES */
+    background-color: #9FA8DA; /* Color con valor 200 */
+    border: 1px solid #1A237E; /* Color con valor 900 */
+    color: #212121; /* Color con valor 900 */
+}
+
+.add-user-container {
+	background: rgba(255, 255, 255, 0.11);
+	color: #FFF;
+	width: 500px;
+	margin: 25px auto;
+	border-radius: 8px;
+	box-shadow: 0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2);
+}
+
+.avatar-container {
+	max-width: 100%;
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar-container .material-icons {
+	font-size: 72px;
+}
+
+.title-container {
+	max-width: 100%;
+	padding: 8px;
+	text-align: center;
+}
+
+.body-container {
+	max-width: 100%;
+	padding: 8px;
+}
+
+.body-container p {
+	margin-bottom: 22px;
+}
