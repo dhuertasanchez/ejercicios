@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>Buscador dinámico JS</title>
+</head>
+<body>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Buscador</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                      <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Buscador</span>
+            <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+
+            <main class="mdl-layout__content">
+
+                <div class="page-content">
+
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col mdl-typography--title mdl-typography--text-center padding-cell cell-center">
+                            Listado de datos
+                        </div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col mdl-shadow--6dp rounded-corner cell-center search-container">
+                            <input type="text" id="mySearch" onkeyup="searchTable()" placeholder="Ingresa el dato a buscar..." title="Buscar en los registros de la tabla">
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-shadow--6dp rounded-corner table-container">
+                            <table id="myRecords" class="mdl-data-table mdl-js-data-table">
+                                <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric">Clave de usuario</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Nombre</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Correo electrónico</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Dirección</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Teléfono celular</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">217-94-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Deanne S. Walker</td>
+                                        <td class="mdl-data-table__cell--non-numeric">DeanneSWalker@gustr.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">3553 Hammilton Drive, Annapolis</td>
+                                        <td class="mdl-data-table__cell--non-numeric">410-224-2209</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">514-20-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Vincent B. Billingsley</td>
+                                        <td class="mdl-data-table__cell--non-numeric">VincentBBilligsley@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">2823 Roosevelt Road, Mound Valley</td>
+                                        <td class="mdl-data-table__cell--non-numeric">620-328-6898</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">467-72-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Till T. Cronin</td>
+                                        <td class="mdl-data-table__cell--non-numeric">JillTCronin@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">1389 Monroe Street, Houston</td>
+                                        <td class="mdl-data-table__cell--non-numeric">713-374-0497</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">524-29-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Henry D. Sanchez</td>
+                                        <td class="mdl-data-table__cell--non-numeric">HenryDSanchez@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">4604 Timberbook Lane, Westminster</td>
+                                        <td class="mdl-data-table__cell--non-numeric">970-301-1199</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">638-48-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Howard E. Williamson</td>
+                                        <td class="mdl-data-table__cell--non-numeric">HowardEWilliamson@gustr.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">1659 Laurel Lane, Midland</td>
+                                        <td class="mdl-data-table__cell--non-numeric">432-543-0902</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">363-26-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Katherine W. Roberts</td>
+                                        <td class="mdl-data-table__cell--non-numeric">KatherineWRoberts@gustr.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">2623 John Avenue, Lansing</td>
+                                        <td class="mdl-data-table__cell--non-numeric">517-833-4767</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">537-14-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">David S. Spillman</td>
+                                        <td class="mdl-data-table__cell--non-numeric">DavidSSpillman@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">2607 Fort Street, Kent</td>
+                                        <td class="mdl-data-table__cell--non-numeric">253-218-3137</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">329-48-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Steven S. McCoy</td>
+                                        <td class="mdl-data-table__cell--non-numeric">StevenSMcCoy@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">3800 Pinewood Drive, Roselle</td>
+                                        <td class="mdl-data-table__cell--non-numeric">847-895-3798</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">673-09-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Brandy W. Parks</td>
+                                        <td class="mdl-data-table__cell--non-numeric">BrandyWParks@gustr.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">2431 Flint Street, Atlanta</td>
+                                        <td class="mdl-data-table__cell--non-numeric">678-206-9099</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">850-22-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Vern Rosenbaum</td>
+                                        <td class="mdl-data-table__cell--non-numeric">VernRosenbaum@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">87498 Rashad Mission, Buckinghamshire</td>
+                                        <td class="mdl-data-table__cell--non-numeric">527-016-6954</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">259-23-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Valentin Boehm</td>
+                                        <td class="mdl-data-table__cell--non-numeric">ValentinBoehm@gustr.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">8150 Jarod Drive, Avon</td>
+                                        <td class="mdl-data-table__cell--non-numeric">469-010-0386</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">776-49-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Ms. Dewayne Williamson</td>
+                                        <td class="mdl-data-table__cell--non-numeric">DewayneWilliamson@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">920 Herzog Inlet, Berkshire</td>
+                                        <td class="mdl-data-table__cell--non-numeric">678-130-9500</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">158-96-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Krystal Koepp</td>
+                                        <td class="mdl-data-table__cell--non-numeric">KrystalKoepp@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">05248 Marlon Canyon, Bedfordshire</td>
+                                        <td class="mdl-data-table__cell--non-numeric">270-807-3886</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">994-35-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Paige Homenick</td>
+                                        <td class="mdl-data-table__cell--non-numeric">PageHomenick@superrito.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">702 Florida Meadow, Cambridgeshire</td>
+                                        <td class="mdl-data-table__cell--non-numeric">996-437-9233</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">733-80-XXXX</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Miss Antonetta Wintheiser</td>
+                                        <td class="mdl-data-table__cell--non-numeric">AntoonettaWintheiser@gustr.com</td>
+                                        <td class="mdl-data-table__cell--non-numeric">88366 Sunny Isle, Borders</td>
+                                        <td class="mdl-data-table__cell--non-numeric">687-506-4142</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                
+                </div>
+
+            </main>
+
+    </div>
+    
+</body>
+</html>

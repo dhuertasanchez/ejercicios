@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: red;
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.rounded-corner {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.title-card {
+    max-width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.body-card {
+    max-width: 100%;
+    padding: 12px;
+}
+
+.grid-container-dashboard {
+    width: 97%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.menu-lateral-container {
+    border-right: 1px solid #E0E0E0;
+}
+
+.link-lateral-dashboard {
+    display: block;
+    padding: 20px 20px;
+    color: #01579B;
+}
+
+.menu-dashboard-container a:hover {
+    background: #01579B;
+    color: #FFF;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.menu-dashboard-container .material-icons {
+    vertical-align: middle;
+}

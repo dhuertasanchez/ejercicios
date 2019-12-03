@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+}
+
+.cell-center {
+    margin: 20px auto;
+}
+
+.padding-cell {
+    padding: 15px;
+}
+
+.rounded-corner {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-container input {
+    width: 100%;
+    height: 42px;
+    border: 0;
+    font-size: 28px;
+    padding: 8px;
+    background: transparent;
+}
+
+.table-container {
+    margin: 20px auto;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    background: #BDBDBD;
+}
